@@ -1,0 +1,698 @@
+@font-face {
+  font-family: "E-Ukraine-Regular";
+  src: url("fonts/e-Ukraine_font/desktop/e-Ukraine-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "E-Ukraine-Bold";
+  src: url("fonts/e-Ukraine_font/desktop/e-Ukraine-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "E-Ukraine-Medium";
+  src: url("fonts/e-Ukraine_font/desktop/e-Ukraine-Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "E-Ukraine-Thin";
+  src: url("fonts/e-Ukraine_font/desktop/e-Ukraine-Thin.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 25000px;
+  background-attachment: fixed;
+  background-size: cover;
+  white-space: nowrap;
+
+  /* Стартовый фон */
+  background: linear-gradient(160deg, #57fff4, #6bffce, #65e0ff);
+  animation: gradientFlow 15s ease-in-out infinite alternate;
+}
+
+body.screen-2 .container-document,
+body.screen-2 .container-document-2 {
+  transform: translateX(-120%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Третий въезжает и становится как обычный документ */
+body.screen-2 .container-document-3 {
+  right: 10%;      /* ставим по центру, подгони при необходимости */
+  top: 11.5%;
+  height: 58%;     /* как у остальных */
+  opacity: 1;
+}
+
+/* ---- МЯГКИЙ ФОН КАК В ДІЇ ---- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: inherit; /* повторяет фон body */
+  filter: blur(2px);
+  opacity: 0.9;
+  animation: huePulse 20s linear infinite alternate;
+}
+
+/* Анимация плавного движения фона */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+    background: linear-gradient(160deg, #57fff4, #6bffce, #65e0ff);
+  }
+  50% {
+    background-position: 100% 50%;
+    background: linear-gradient(160deg, #6bffce, #65e0ff, #57fff4);
+  }
+  100% {
+    background-position: 0% 50%;
+    background: linear-gradient(160deg, #65e0ff, #57fff4, #6bffce);
+  }
+}
+
+/* Едва заметное “дыхание” цвета */
+@keyframes huePulse {
+  0%   { filter: hue-rotate(0deg) brightness(1); }
+  50%  { filter: hue-rotate(15deg) brightness(1.05); }
+  100% { filter: hue-rotate(-15deg) brightness(1); }
+}
+
+/* ---- БЛОБЫ ---- */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 1;
+  animation: moveRandom 10s ease-in-out infinite;
+}
+
+/* Размеры, цвета, отдельная цветовая анимация у каждого */
+.blob1 { width: 700px; height: 700px; background: #e3ff54; top: 0%; left: -8%;  animation: moveRandom 22s ease-in-out infinite, colorShift1 30s ease-in-out infinite; }
+.blob2 { width: 700px; height: 700px; background: #5eff49; top: 60%; left: -20%; animation: moveRandom 25s ease-in-out infinite, colorShift2 28s ease-in-out infinite; }
+.blob3 { width: 1000px; height: 1000px; background: #d4ff46; top: 40%; left: 50%; animation: moveRandom 28s ease-in-out infinite, colorShift3 35s ease-in-out infinite; }
+.blob4 { width: 900px; height: 900px; background: #e3ff54; top: 60%; left: -10%; animation: moveRandom 26s ease-in-out infinite, colorShift4 32s ease-in-out infinite; }
+.blob5 { width: 600px; height: 600px; background: #49ff95; top: -10%; left: 60%; animation: moveRandom 30s ease-in-out infinite, colorShift5 37s ease-in-out infinite; }
+.blob6 { width: 500px; height: 500px; background: #66ff47; top: 60%; left: 40%; animation: moveRandom 32s ease-in-out infinite, colorShift6 39s ease-in-out infinite; }
+
+/* ---- Анимация движения ---- */
+@keyframes moveRandom {
+  0%   { transform: translate(0, 0) scale(1); }
+  20%  { transform: translate(50px, -100px) scale(1.1); }
+  40%  { transform: translate(-80px, 60px) scale(0.9); }
+  60%  { transform: translate(120px, 100px) scale(1.15); }
+  80%  { transform: translate(-100px, -80px) scale(1.05); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* ---- Независимые цветовые циклы (мягко-красочные версии) ---- */
+@keyframes colorShift1 {
+  0% { background-color: #f6ff94; }
+  25% { background-color: #c7f7ff; }
+  50% { background-color: #93d7ff; }
+  75% { background-color: #b6ffda; }
+  90% { background-color: #e3c6ff; }
+  100% { background-color: #f6ff94; }
+}
+
+@keyframes colorShift2 {
+  0% { background-color: #b7ff9f; }
+  25% { background-color: #e3c6ff; }
+  50% { background-color: #b6ffda; }
+  75% { background-color: #c7f7ff; }
+  90% { background-color: #7ec3ff; }
+  100% { background-color: #b7ff9f; }
+}
+
+@keyframes colorShift3 {
+  0% { background-color: #f1ff86; }
+  25% { background-color: #b6ffda; }
+  50% { background-color: #e3c6ff; }
+  75% { background-color: #c7f7ff; }
+  90% { background-color: #94ffe9; }
+  100% { background-color: #f1ff86; }
+}
+
+@keyframes colorShift4 {
+  0% { background-color: #f6ff94; }
+  25% { background-color: #7ec3ff; }
+  50% { background-color: #b6ffda; }
+  75% { background-color: #c7f7ff; }
+  90% { background-color: #e3c6ff; }
+  100% { background-color: #f6ff94; }
+}
+
+@keyframes colorShift5 {
+  0% { background-color: #97ffd1; }
+  25% { background-color: #97e0ff; }
+  50% { background-color: #c7f7ff; }
+  75% { background-color: #b6ffda; }
+  90% { background-color: #e3c6ff; }
+  100% { background-color: #97ffd1; }
+}
+
+@keyframes colorShift6 {
+  0% { background-color: #aaff93; }
+  25% { background-color: #e3c6ff; }
+  50% { background-color: #b6ffda; }
+  75% { background-color: #c7f7ff; }
+  85% { background-color: #97ffd1; }
+  95% { background-color: #d7aaff; }
+  100% { background-color: #aaff93; }
+}
+
+
+  .container-document{    
+    width: 80%;
+    height: 58%;
+    margin: auto auto;
+    position: absolute;
+    top: 11.5%;
+    padding: 30px;
+    border-radius: 70px;
+    background: rgba(255, 255, 255, 0.582);
+    backdrop-filter: blur(5px); 
+    color: white;
+    text-align: left;
+    font-family: "E-Ukraine-Regular";
+    transform-style: preserve-3d;
+    transition: transform 0.7s;
+    cursor: pointer;
+    backface-visibility: hidden;
+  }
+  
+
+  .container-document-2{    
+    width: 80%;
+    height: 58%;
+    margin: auto auto;
+    position: absolute;
+    top: 11.5%;
+    padding: 30px;
+    border-radius: 70px;
+    background: white;
+    color: rgb(255, 255, 255);
+    font-family: "E-Ukraine-Regular";
+    transform-style: preserve-3d;
+    transition: transform 0.7s;
+    cursor: pointer;
+    backface-visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+.container-document,
+.container-document-2,
+.container-document-3,
+.container-document-4 {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, right 0.3s ease-in-out, height 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+
+.code-text {
+  color: #888;
+  font-size: 27px;
+  margin-bottom: 10px;
+  position: relative;
+  top: 5%;
+}
+
+.qrcode {
+  position: absolute;
+  left: 14%;
+  top: 16%;
+  width: 75%;
+  height: 50%;
+}
+
+.qr-button {
+  width: 160px;
+  height: 220px;
+  position: absolute;
+  top: 75.5%;
+  left: 22%;
+  background-image: url('qr-button.png');
+  background-color: transparent;
+  background-size: cover;
+  background-position: center; 
+  border: none; 
+  outline: none; 
+}
+
+.strih-button {
+  width: 200px;
+  height: 240px;
+  position: absolute;
+  top: 74.8%;
+  left: 58%;
+  background-image: url('strih-button.png');
+  background-color: transparent;
+  background-size: cover;
+  background-position: center; 
+  border: none; 
+  outline: none; 
+}
+
+.container-document-3 {
+  width: 80%;
+  height: 50%;
+  margin: auto auto;
+  position: absolute;
+  top: 15.5%;
+  right: -83%;          
+  padding: 30px;
+  border-radius: 70px;
+  background: rgba(255, 255, 255, 0.582);
+  backdrop-filter: blur(5px); 
+  color: white;
+  text-align: left;
+  font-family: "E-Ukraine-Regular";
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+  opacity: 1;        
+}
+
+.container-document-3 .platnik {
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: #000000;
+    position: absolute;
+    left: 6%;
+    top: 4%;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.container-document-3 .RNOKPP {
+    font-size: 38px;
+    margin-bottom: 10px;
+    color: #000000;
+    position: absolute;
+    left: 6%;
+    top: 15%;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.container-document-3 .PIB-platnik {
+    font-size: 33px;
+    margin-bottom: 10px;
+    color: #000000;
+    line-height: 1.5;
+    position: absolute;
+    left: 6%;
+    top: 24%;
+}
+
+.container-document-3 .date-birthday {
+    font-size: 29px;
+    margin-bottom: 10px;
+    color: #000000;
+    line-height: 1.8;
+    position: absolute;
+    left: 6%;
+    top: 40%;
+}
+
+.container-document-3 .container-diisnosti2 {
+  position: absolute;
+  top: 74%;
+  left: 0;
+  width: 100%;
+  height: 6%;
+  overflow: hidden; 
+  background: linear-gradient(90deg, #abfd97,#4cd480ee, #2ca8c7b8);
+  font-family: "E-Ukraine-Regular";
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.container-document-3 .marquee2 {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+}
+
+.marquee2 span {
+  font-size: 32px;
+  color: #000000;
+  padding-right: 20px;
+}
+
+.container-document-3 .NumberRnokpp {
+    font-size: 70px;
+    color: #000000;
+    line-height: 1.3;
+    position: absolute;
+    left: 5%;
+    top: 80%;
+}
+
+.container-document-3 .copy-paste {
+  width: 55px;
+  height: 58px;
+  position: absolute;
+  top: 87%;
+  left: 59%;
+  background-image: url('copy-paste.png');
+  background-color: transparent;
+  background-size: cover;
+  background-position: center; 
+  border: none; 
+  outline: none;
+}
+
+
+ .container-document-4{    
+    width: 80%;
+    height: 58%;
+    margin: auto auto;
+    position: absolute;
+    top: 11.5%;
+    padding: 30px;
+    border-radius: 70px;
+    background: white;
+    color: rgb(255, 255, 255);
+    font-family: "E-Ukraine-Regular";
+    transform-style: preserve-3d;
+    transition: transform 0.7s;
+    cursor: pointer;
+    backface-visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+.container-document-2 {
+  transform: rotateY(180deg);
+}
+
+body.flip1 .container-document {
+  transform: rotateY(180deg);
+}
+
+body.flip1 .container-document-2 {
+  transform: rotateY(360deg);
+}
+
+.container-document-4 {
+  transform: rotateY(180deg);
+}
+
+body.flip2 .container-document-3 {
+  transform: rotateY(180deg);
+}
+
+body.flip2 .container-document-4 {
+  transform: rotateY(360deg);
+}
+
+
+body:not(.screen-2) .container-diisnosti2 {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none; /* чтобы не мешала кликам */
+}
+
+/* Когда включён второй экран — полоса появляется */
+body.screen-2 .container-diisnosti2 {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  pointer-events: auto;
+}
+
+
+body.screen-2 .container-document-3 {
+  width: 80%;
+  height: 58%;
+  position: absolute;
+  top: 11.5%;
+  left: 7%;
+  opacity: 1;
+}
+
+body.screen-2 .container-document{
+  transform: translateX(-103%);    
+  opacity: 1;
+  width: 80%;
+  height: 50%;
+  margin: auto auto;
+  position: absolute;
+  top: 15.5%;  
+  pointer-events: none;
+}
+
+/* Когда первый экран (по умолчанию) — полоса видна */
+body:not(.screen-2) .container-diisnosti {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+/* Когда включён второй экран — полоса исчезает */
+body.screen-2 .container-diisnosti {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none; 
+}
+
+
+  .container-document h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: #000000;
+    position: absolute;
+    left: 6%;
+    top: 4%;
+    letter-spacing: 2px;
+    font-weight: 400;
+  }
+
+  .container-document p {
+    font-size: 30px;
+    font-weight: 200;
+    margin-bottom: 10px;
+    color: #000000;
+    line-height: 1.4;
+    position: absolute;
+    left: 56%;
+    top: 17.5%;
+  }
+
+  .container-document p.date {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #000000;
+
+    position: absolute;
+    left: 56%;
+    top: 25%;
+  }
+
+  .container-document p.number {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #000000;
+
+    position: absolute;
+    left: 56%;
+    top: 33%;
+  }
+
+  .container-document p.numbero {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #000000;
+
+    position: absolute;
+    left: 56%;
+    top: 37%;
+  }
+
+  img {
+    width: 360px;
+    height: 460px;
+    border-radius: 40px; 
+    object-fit: cover;  
+    position: absolute;
+    top: 19%; 
+    left: 5%;
+  }
+
+.container-diisnosti {
+  position: absolute;
+  top: 71%;
+  left: 0;
+  width: 100%;
+  height: 6%;
+  overflow: hidden; 
+  background: linear-gradient(90deg, #abfd97,#83ffb2ee, #40d6fbb8);
+  font-family: "E-Ukraine-Regular";
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.marquee {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+}
+
+.marquee span {
+  font-size: 32px;
+  color: #000000;
+  padding-right: 20px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.container-document p.PIB {
+    font-size: 42px;
+    color: #000000;
+    line-height: 1.3;
+    position: absolute;
+    left: 5%;
+    top: 78%;
+}
+
+.options {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 88%;
+  left: 86%;
+  background-image: url('menu.png');
+  background-color: transparent;
+  background-size: cover;
+  background-position: center; 
+  border: none; 
+  outline: none;           
+}
+
+.options:active {
+  background-color: transparent;
+  transform: none;
+}
+
+.pidpis {
+    width: 150px;
+    height: 150px;
+    border-radius: 40px; 
+    object-fit: cover;  
+    position: absolute;
+    top: 45%; 
+    left: 57%;
+  }
+.circle,
+.circle2 {
+  border-radius: 50%;
+  position: absolute;
+  top: 77%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+/* Базовые размеры и цвета (первый активен) */
+.circle {
+  height: 22px;
+  width: 22px;
+  left: 49%;
+  background-color: white;
+}
+
+.circle2 {
+  height: 18px;
+  width: 18px;
+  left: 53%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+body.screen-2 .circle {
+  height: 18px;
+  width: 18px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+body.screen-2 .circle2 {
+  height: 22px;
+  width: 22px;
+  background-color: white;
+}
+
+.down-bar {    
+    width: 100%;
+    height: 10%;
+    margin: auto auto;
+    position: absolute;
+    bottom: -1%;
+    padding: 30px;
+    background: rgba(0, 0, 0);
+    backdrop-filter: blur(5px); 
+    color: white;
+    text-align: left;
+    font-family: "E-Ukraine-Regular";
+  }
+
+
+  .strichka {
+    width: 130px;
+    height: 130px; 
+    object-fit: cover;  
+    position: absolute;
+    top: 6%; 
+    left: 8%;
+  }
+
+  .document {
+    width: 183px;
+    height: 183px; 
+    object-fit: cover;  
+    position: absolute;
+    top: -1%; 
+    left: 30%;
+  }
+
+  .services {
+    width: 138px;
+    height: 138px; 
+    object-fit: cover;  
+    position: absolute;
+    top: 7%; 
+    left: 57%;
+  }
+
+  .menus {
+    width: 138px;
+    height: 138px; 
+    object-fit: cover;  
+    position: absolute;
+    top: 6%; 
+    left: 79%;
+  }

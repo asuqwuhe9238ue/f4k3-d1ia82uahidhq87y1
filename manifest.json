@@ -1,0 +1,20 @@
+{
+  "name": "Дiя",
+  "short_name": "Дiя",
+  "start_url": "./fake_diia.html",
+  "display": "standalone",
+  "background_color": "#00d0c2",
+  "theme_color": "#00d0c2",
+  "icons": [
+    {
+      "src": "unnamed.jpg",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "unnamed.jpg",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
