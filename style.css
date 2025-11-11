@@ -1,27 +1,27 @@
 @font-face {
   font-family: "E-Ukraine-Regular";
-  src: url("fonts/e-Ukraine_font/desktop/e-Ukraine-Regular.otf") format("opentype");
+  src: url("./e-Ukraine-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "E-Ukraine-Bold";
-  src: url("fonts/e-Ukraine_font/desktop/e-Ukraine-Bold.otf") format("opentype");
+  src: url("./e-Ukraine-Bold.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "E-Ukraine-Medium";
-  src: url("fonts/e-Ukraine_font/desktop/e-Ukraine-Medium.otf") format("opentype");
+  src: url("./e-Ukraine-Medium.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "E-Ukraine-Thin";
-  src: url("fonts/e-Ukraine_font/desktop/e-Ukraine-Thin.otf") format("opentype");
+  src: url("./e-Ukraine-Thin.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
