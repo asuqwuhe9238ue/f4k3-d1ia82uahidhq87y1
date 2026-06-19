@@ -739,6 +739,7 @@ body.screen-2 .circle2 {
     position: absolute;
     top: 5%;
     left: 50%;
+    z-index: 10;
 }
 
   .services {
