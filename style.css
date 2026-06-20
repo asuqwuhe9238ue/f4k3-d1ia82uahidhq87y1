@@ -72,14 +72,9 @@ body.screen-3 .container-document-3 {
 
 /* ---- МЯГКИЙ ФОН КАК В ДІЇ ---- */
 body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: inherit; /* повторяет фон body */
-  filter: blur(2px);
-  opacity: 0.9;
-  animation: huePulse 20s linear infinite alternate;
+  
+  display: none !important;
+
 }
 
 /* Анимация плавного движения фона */
@@ -144,7 +139,7 @@ body::before {
 
 @keyframes colorShift2 {
   0% { background-color: #b7ff9f; }
-  25% { background-color: #89759c; }
+  25% { background-color: #b79dd0; }
   50% { background-color: #b6ffda; }
   75% { background-color: #c7f7ff; }
   90% { background-color: #4d799f; }
@@ -196,7 +191,7 @@ body::before {
     top: 11.5%;
     padding: 30px;
     border-radius: 70px;
-    background: rgba(255, 255, 255, 0.582);
+    background: rgba(255, 255, 255, 0.650);
     backdrop-filter: blur(5px); 
     color: white;
     text-align: left;
@@ -290,7 +285,7 @@ body::before {
   right: -83%;          
   padding: 30px;
   border-radius: 70px;
-  background: rgba(255, 255, 255, 0.582);
+  background: rgba(255, 255, 255, 0.685);
   backdrop-filter: blur(5px); 
   color: white;
   text-align: left;
@@ -552,7 +547,7 @@ body.screen-2 .container-diisnosti {
   top: 71%;
   left: 0;
   width: 100%;
-  height: 4.7%;
+  height: 5%;
   overflow: hidden; 
   background: linear-gradient(90deg, #abfd97,#83ffb2ee, #32a6c3b8);
   font-family: "E-Ukraine-Regular";
@@ -674,49 +669,47 @@ body.screen-2 .circle2 {
     font-family: "E-Ukraine-Regular";
   }
 
-
   .strichka {
-    width: 130px;
-    height: 130px; 
+    width: 125px;
+    height: 125px; 
     object-fit: cover;  
     position: absolute;
-    top: 6%; 
+    top: 10%; 
     left: 8%;
   }
 
   .document {
-    width: 183px;
-    height: 183px; 
+    width: 178px;
+    height: 178px; 
     object-fit: cover;  
     position: absolute;
-    top: -1%; 
-    left: 30%;
+    top: 2.5%; 
+    left: 23.5%;
   }
 
-  .diiaai {
-    width: 123px;
-    height: 123px;
-    object-fit: cover;
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    z-index: 10;
-}
-
   .services {
-    width: 138px;
-    height: 138px; 
+    width: 123px;
+    height: 123px; 
     object-fit: cover;  
     position: absolute;
-    top: 7%; 
-    left: 57%;
+    top: 10.5%; 
+    left: 63%;
   }
 
   .menus {
-    width: 138px;
-    height: 138px; 
+    width: 125px;
+    height: 125px; 
     object-fit: cover;  
     position: absolute;
-    top: 6%; 
-    left: 79%;
+    top: 9%; 
+    left: 81%;
   }
+
+ .diia_ai {
+    width: 155px;
+    height: 155px;
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+}
