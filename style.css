@@ -228,45 +228,6 @@ body::before {
     text-align: center;
   }
 
-  .container-document-zacordonii{    
-    width: 80%;
-    height: 58%;
-    margin: auto auto;
-    position: absolute;
-    top: 11.5%;
-    padding: 30px;
-    border-radius: 70px;
-    background: rgba(255, 255, 255, 0.685);
-    backdrop-filter: blur(5px); 
-    color: white;
-    text-align: left;
-    font-family: "E-Ukraine-Regular";
-    transform-style: preserve-3d;
-    transition: transform 0.7s;
-    cursor: pointer;
-    backface-visibility: hidden;
-  }
-  
-
-  .container-document-zacordonii-2{    
-    width: 80%;
-    height: 58%;
-    margin: auto auto;
-    position: absolute;
-    top: 11.5%;
-    padding: 30px;
-    border-radius: 70px;
-    background: rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-    font-family: "E-Ukraine-Regular";
-    transform-style: preserve-3d;
-    transition: transform 0.7s;
-    cursor: pointer;
-    backface-visibility: hidden;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
 
 .container-document,
 .container-document-2,
