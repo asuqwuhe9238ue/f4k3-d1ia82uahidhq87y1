@@ -110,11 +110,11 @@ body::before {
 }
 
 /* Размеры, цвета, отдельная цветовая анимация у каждого */
-.blob1 { width: 700px; height: 700px; background: #ebfd8d; top: 0%; left: -8%;  animation: moveRandom 22s ease-in-out infinite, colorShift1 30s ease-in-out infinite; }
-.blob2 { width: 700px; height: 700px; background: #85ff75; top: 60%; left: -20%; animation: moveRandom 25s ease-in-out infinite, colorShift2 28s ease-in-out infinite; }
+.blob1 { width: 700px; height: 700px; background: #9afff0; top: 0%; left: -8%;  animation: moveRandom 22s ease-in-out infinite, colorShift1 30s ease-in-out infinite; }
+.blob2 { width: 700px; height: 700px; background: #92fffd; top: 60%; left: -20%; animation: moveRandom 25s ease-in-out infinite, colorShift2 28s ease-in-out infinite; }
 .blob3 { width: 1000px; height: 1000px; background: #d4ff46; top: 40%; left: 50%; animation: moveRandom 28s ease-in-out infinite, colorShift3 35s ease-in-out infinite; }
-.blob4 { width: 900px; height: 900px; background: #e3ff54; top: 60%; left: -10%; animation: moveRandom 26s ease-in-out infinite, colorShift4 32s ease-in-out infinite; }
-.blob5 { width: 600px; height: 600px; background: #49ff95; top: -10%; left: 60%; animation: moveRandom 30s ease-in-out infinite, colorShift5 37s ease-in-out infinite; }
+.blob4 { width: 900px; height: 900px; background: #eeffaf; top: 60%; left: -10%; animation: moveRandom 26s ease-in-out infinite, colorShift4 32s ease-in-out infinite; }
+.blob5 { width: 600px; height: 600px; background: #9bffc5; top: -10%; left: 60%; animation: moveRandom 30s ease-in-out infinite, colorShift5 37s ease-in-out infinite; }
 .blob6 { width: 500px; height: 500px; background: #71f6de; top: 60%; left: 40%; animation: moveRandom 32s ease-in-out infinite, colorShift6 39s ease-in-out infinite; }
 
 /* ---- Анимация движения ---- */
@@ -129,12 +129,12 @@ body::before {
 
 /* ---- Независимые цветовые циклы (мягко-красочные версии) ---- */
 @keyframes colorShift1 {
-  0% { background-color: #f6ff94; }
-  25% { background-color: #c7f7ff; }
+  0% { background-color: #acf9ff; }
+  25% { background-color: #9ef0ff; }
   50% { background-color: #93d7ff; }
-  75% { background-color: #5fb489; }
-  90% { background-color: #e3c6ff; }
-  100% { background-color: #f6ff94; }
+  75% { background-color: #9fffef; }
+  90% { background-color: #9ee8ff; }
+  100% { background-color: #90ffdf; }
 }
 
 @keyframes colorShift2 {
@@ -142,7 +142,7 @@ body::before {
   25% { background-color: #b79dd0; }
   50% { background-color: #b6ffda; }
   75% { background-color: #c7f7ff; }
-  90% { background-color: #4d799f; }
+  90% { background-color: #9ad0ff; }
   100% { background-color: #b7ff9f; }
 }
 
