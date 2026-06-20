@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "E-Ukraine-Regular";
+  src: url("./e-Ukraine-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "E-Ukraine-Bold";
+  src: url("./e-Ukraine-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "E-Ukraine-Medium";
+  src: url("./e-Ukraine-Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "E-Ukraine-Thin";
+  src: url("./e-Ukraine-Thin.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 25000px;
+  background-attachment: fixed;
+  background-size: cover;
+  white-space: nowrap;
+
+  padding-top: env(safe-area-inset-top);
+
+  /* Стартовый фон */
+  background: linear-gradient(150deg, #a3d8fb, #efffd0d2);
+  animation: gradientFlow 15s ease-in-out infinite alternate;
+}
+
+.privit {
+  font-size: 48px;
+  color: #000000;
+  font-family: "E-Ukraine-Regular";
+  font-weight: 200;
+  position: absolute;
+  left: 50%;
+  top: 34%; /* чуть выше центра */
+
+  transform: translate(-50%, -50%);
+}
+
+.diia_start {
+    width: 140px;
+    height: auto;
+    object-fit: cover;  
+    position: absolute;
+    top: 84.4%; 
+    left: 32%;
+}
