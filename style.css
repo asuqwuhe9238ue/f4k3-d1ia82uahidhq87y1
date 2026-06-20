@@ -276,6 +276,8 @@ body::before {
   outline: none; 
 }
 
+
+
 .container-document-3 {
   width: 80%;
   height: 50%;
@@ -618,8 +620,12 @@ body.screen-2 .container-diisnosti {
     top: 45%; 
     left: 57%;
   }
+
+
 .circle,
-.circle2 {
+.circle2,
+.circle3,
+.circle4 {
   border-radius: 50%;
   position: absolute;
   top: 77%;
@@ -629,29 +635,41 @@ body.screen-2 .container-diisnosti {
 
 /* Базовые размеры и цвета (первый активен) */
 .circle {
-  height: 22px;
-  width: 22px;
-  left: 49%;
+  height: 20px;
+  width: 20px;
+  left: 45%;
   background-color: white;
 }
 
 .circle2 {
-  height: 18px;
-  width: 18px;
-  left: 53%;
+  height: 20px;
+  width: 20px;
+  left: 49%;
   background-color: rgba(255, 255, 255, 0.4);
 }
 
+.circle3 {
+  height: 20px;
+  width: 20px;
+  left: 53%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.circle4 {
+  height: 16px;
+  width: 16px;
+  left: 57%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
 
 body.screen-2 .circle {
-  height: 18px;
-  width: 18px;
+  height: 20px;
+  width: 20px;
   background-color: rgba(255, 255, 255, 0.4);
 }
 
 body.screen-2 .circle2 {
-  height: 22px;
-  width: 22px;
+  height: 20px;
+  width: 20px;
   background-color: white;
 }
 
