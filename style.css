@@ -676,21 +676,21 @@ body.screen-2 .circle2 {
 
 
   .strichka {
-    width: 120px;
-    height: 120px; 
+    width: 130px;
+    height: 130px; 
     object-fit: cover;  
     position: absolute;
-    top: 10%; 
+    top: 6%; 
     left: 8%;
   }
 
   .document {
-    width: 173px;
-    height: 173px; 
+    width: 183px;
+    height: 183px; 
     object-fit: cover;  
     position: absolute;
-    top: 2.2%; 
-    left: 24%;
+    top: -1%; 
+    left: 30%;
   }
 
   .diiaai {
@@ -704,19 +704,19 @@ body.screen-2 .circle2 {
 }
 
   .services {
-    width: 123px;
-    height: 123px; 
+    width: 138px;
+    height: 138px; 
     object-fit: cover;  
     position: absolute;
-    top: 10%; 
-    left: 63%;
+    top: 7%; 
+    left: 57%;
   }
 
   .menus {
-    width: 123px;
-    height: 123px; 
+    width: 138px;
+    height: 138px; 
     object-fit: cover;  
     position: absolute;
-    top: 9%; 
-    left: 81%;
+    top: 6%; 
+    left: 79%;
   }
