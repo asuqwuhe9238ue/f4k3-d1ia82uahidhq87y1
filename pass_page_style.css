@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "E-Ukraine-Regular";
+  src: url("./e-Ukraine-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "E-Ukraine-Bold";
+  src: url("./e-Ukraine-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "E-Ukraine-Medium";
+  src: url("./e-Ukraine-Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "E-Ukraine-Thin";
+  src: url("./e-Ukraine-Thin.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 25000px;
+  background-attachment: fixed;
+  background-size: cover;
+  white-space: nowrap;
+
+  padding-top: env(safe-area-inset-top);
+
+  /* Стартовый фон */
+  background: linear-gradient(160deg, #a3d8fb, #efffd0c0);
+  animation: gradientFlow 15s ease-in-out infinite alternate;
+}
+
+.kod {
+  font-size: 22px;
+  color: #000000;
+  font-family: "E-Ukraine-Regular";
+  font-weight: 200;
+  position: absolute;
+  left: 50%;
+  top: 9%; /* чуть выше центра */
+  transform: translate(-50%, -50%);
+}
+
+.circle,
+.circle2,
+.circle3,
+.circle4 {
+  border-radius: 50%;
+  position: absolute;
+  top: 33%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+/* Базовые размеры и цвета (первый активен) */
+.circle {
+  height: 11px;
+  width: 11px;
+  left: 43%;
+  background-color: white;
+}
+
+.circle2 {
+  height: 11px;
+  width: 11px;
+  left: 47.5%;
+  background-color: white;
+}
+
+.circle3 {
+  height: 11px;
+  width: 11px;
+  left: 52.5%;
+  background-color: white;
+}
+.circle4 {
+  height: 11px;
+  width: 11px;
+  left: 57.5%;
+  background-color: white;
+}
+
+.btn1, .btn2, .btn3, .btn4, .btn5,
+.btn6, .btn7, .btn8, .btn9, .btn0 {
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 28px;
+    color: #000000;
+    font-family: "E-Ukraine-Regular";
+}
+
+.btn1 { left: 15%; top: 37%; }
+.btn2 { left: 40%; top: 37%; }
+.btn3 { left: 65%; top: 37%; }
+
+.btn4 { left: 15%; top: 49%; }
+.btn5 { left: 40%; top: 49%; }
+.btn6 { left: 65%; top: 49%; }
+
+.btn7 { left: 15%; top: 61%; }
+.btn8 { left: 40%; top: 61%; }
+.btn9 { left: 65%; top: 61%; }
+
+.btn0 { left: 40%; top: 73%; }
+
+.forget {
+    font-size: 15px;
+  color: #000000;
+  font-family: "E-Ukraine-Regular";
+  font-weight: 200;
+  position: absolute;
+  left: 50%;
+  top: 90%; /* чуть выше центра */
+  transform: translate(-50%, -50%);
+}
